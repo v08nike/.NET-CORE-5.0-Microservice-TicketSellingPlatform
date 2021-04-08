@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30524.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{2A8B51D6-1CF3-497F-8DA0-4CEFCE3FD012}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{FA207D52-3990-4A0B-8D6A-89DEAE3C28E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketSale.Services.Catalog", "Services\Catalog\TicketSale.Services.Catalog\TicketSale.Services.Catalog.csproj", "{8E7B6F59-9788-452D-BCE7-F07735AB2AE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E7B6F59-9788-452D-BCE7-F07735AB2AE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E7B6F59-9788-452D-BCE7-F07735AB2AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E7B6F59-9788-452D-BCE7-F07735AB2AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E7B6F59-9788-452D-BCE7-F07735AB2AE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FA207D52-3990-4A0B-8D6A-89DEAE3C28E7} = {2A8B51D6-1CF3-497F-8DA0-4CEFCE3FD012}
+		{8E7B6F59-9788-452D-BCE7-F07735AB2AE0} = {FA207D52-3990-4A0B-8D6A-89DEAE3C28E7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65070AA6-9E15-442C-9C82-4277C444C7A5}
+	EndGlobalSection
+EndGlobal
