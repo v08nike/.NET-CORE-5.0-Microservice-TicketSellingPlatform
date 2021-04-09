@@ -7,7 +7,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{2A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{FA207D52-3990-4A0B-8D6A-89DEAE3C28E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketSale.Services.Catalog", "Services\Catalog\TicketSale.Services.Catalog\TicketSale.Services.Catalog.csproj", "{8E7B6F59-9788-452D-BCE7-F07735AB2AE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketSale.Services.Catalog", "Services\Catalog\TicketSale.Services.Catalog\TicketSale.Services.Catalog.csproj", "{8E7B6F59-9788-452D-BCE7-F07735AB2AE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{210D8990-CB64-4BDC-B4C4-7D17D6A4A167}"
+	ProjectSection(SolutionItems) = preProject
+		Port.txt = Port.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
