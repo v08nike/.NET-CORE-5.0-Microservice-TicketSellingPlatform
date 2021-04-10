@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Port.txt = Port.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{6E3A9B34-C128-454D-9694-28A5A126E272}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketSale.Shared", "Shared\TicketSale.Shared\TicketSale.Shared.csproj", "{24320760-952D-4CAC-8FBC-019B53F42310}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +28,10 @@ Global
 		{8E7B6F59-9788-452D-BCE7-F07735AB2AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E7B6F59-9788-452D-BCE7-F07735AB2AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E7B6F59-9788-452D-BCE7-F07735AB2AE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24320760-952D-4CAC-8FBC-019B53F42310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24320760-952D-4CAC-8FBC-019B53F42310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24320760-952D-4CAC-8FBC-019B53F42310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24320760-952D-4CAC-8FBC-019B53F42310}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -31,6 +39,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FA207D52-3990-4A0B-8D6A-89DEAE3C28E7} = {2A8B51D6-1CF3-497F-8DA0-4CEFCE3FD012}
 		{8E7B6F59-9788-452D-BCE7-F07735AB2AE0} = {FA207D52-3990-4A0B-8D6A-89DEAE3C28E7}
+		{24320760-952D-4CAC-8FBC-019B53F42310} = {6E3A9B34-C128-454D-9694-28A5A126E272}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {65070AA6-9E15-442C-9C82-4277C444C7A5}
