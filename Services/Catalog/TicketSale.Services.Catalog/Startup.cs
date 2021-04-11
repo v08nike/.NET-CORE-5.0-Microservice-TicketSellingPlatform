@@ -5,11 +5,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TicketSale.Services.Catalog.Settings;
 
 namespace TicketSale.Services.Catalog
 {
@@ -27,6 +29,13 @@ namespace TicketSale.Services.Catalog
         {
             services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
+
+            services.Configure<DatabaseSettings>(Configuration.GetSection("DatabaseSettings"));
+            services.AddSingleton<DatabaseSettings>(sp =>
+            {
+                return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TicketSale.Services.Catalog", Version = "v1" });
