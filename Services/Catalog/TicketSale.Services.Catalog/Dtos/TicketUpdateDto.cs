@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace TicketSale.Services.Catalog.Dtos
 {
-    public class CourseUpdateDto
+    public class TicketUpdateDto
     {
         public string İd { get; set; }
         public string Name { get; set; }
