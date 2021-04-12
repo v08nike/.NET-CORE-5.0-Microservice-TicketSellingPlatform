@@ -11,13 +11,13 @@ using TicketSale.Services.Catalog.Dtos;
 
 namespace TicketSale.Services.Catalog.Services
 {
-    public class CategoryServices
+    public class CategoryService:ICategoryService
     {
         private readonly IMongoCollection<Category> _categoryCollection;
 
         private readonly IMapper _mapper;
 
-        internal CategoryServices(IMapper mapper, IDatabaseSettings databaseSettings)
+        internal CategoryService(IMapper mapper, IDatabaseSettings databaseSettings)
         {
             var client = new MongoClient(databaseSettings.ConnectionString);
 
@@ -42,6 +42,17 @@ namespace TicketSale.Services.Catalog.Services
 
             return Response<CategoryDto>.Success(_mapper.Map<CategoryDto>(category), 200);
 
+        }
+
+        public async Task<Response<CategoryDto>> GetByIdAsync(string id)
+        {
+            var category = await _categoryCollection.Find<Category>(x => x.Id == id).FirstOrDefaultAsync();
+
+            if (category == null)
+            {
+                return Response<CategoryDto>.Fail("Category not found", 404);
+            }
+            return Response<CategoryDto>.Success(_mapper.Map<CategoryDto>(category),200);
         }
 
     }

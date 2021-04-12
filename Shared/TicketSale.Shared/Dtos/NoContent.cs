@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TicketSale.Shared.Dtos
 {
-    class NoContent
+    public class NoContent
     {
     }
 }
