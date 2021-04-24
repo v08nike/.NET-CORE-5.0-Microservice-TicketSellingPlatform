@@ -7,7 +7,7 @@ using TicketSale.Shared.Dtos;
 
 namespace TicketSale.Services.Catalog.Services
 {
-    interface ITicketService
+    public interface ITicketService
     {
         Task<Response<List<TicketDto>>> GetAllAsync();
         Task<Response<TicketDto>> GetByIdAsync(string id);

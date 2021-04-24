@@ -19,12 +19,13 @@
     },
     "TicketSale.Services.Catalog": {
       "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "launchBrowser": false,
       "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5011",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "dotnetRunMessages": "true",
-      "applicationUrl": "http://localhost:5011"
+      }
     }
   }
 }

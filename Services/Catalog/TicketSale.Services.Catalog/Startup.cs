@@ -36,7 +36,7 @@ namespace TicketSale.Services.Catalog
             services.AddControllers();
 
             services.Configure<DatabaseSettings>(Configuration.GetSection("DatabaseSettings"));
-            services.AddSingleton<DatabaseSettings>(sp =>
+            services.AddSingleton<IDatabaseSettings>(sp =>
             {
                 return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
             });

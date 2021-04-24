@@ -17,7 +17,7 @@ namespace TicketSale.Services.Catalog.Services
 
         private readonly IMapper _mapper;
 
-        internal CategoryService(IMapper mapper, IDatabaseSettings databaseSettings)
+        public CategoryService(IMapper mapper, IDatabaseSettings databaseSettings)
         {
             var client = new MongoClient(databaseSettings.ConnectionString);
 
