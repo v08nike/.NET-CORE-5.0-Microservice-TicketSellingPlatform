@@ -19,7 +19,7 @@ namespace TicketSale.Services.Catalog.Services
 
         private readonly IMapper _mapper;
 
-        internal TicketService(IMapper mapper, IDatabaseSettings databaseSettings)
+        public TicketService(IMapper mapper, IDatabaseSettings databaseSettings)
         {
             var client = new MongoClient(databaseSettings.ConnectionString);
 

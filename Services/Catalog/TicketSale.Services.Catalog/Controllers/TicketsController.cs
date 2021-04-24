@@ -12,15 +12,16 @@ namespace TicketSale.Services.Catalog.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TicketController : CustomBaseController
+    public class TicketsController : CustomBaseController
     {
         private readonly ITicketService _ticketService;
 
-        internal TicketController(ITicketService ticketService)
+        public TicketsController(ITicketService ticketService)
         {
             _ticketService = ticketService;
         }
 
+        [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var response = await _ticketService.GetAllAsync();
@@ -34,6 +35,7 @@ namespace TicketSale.Services.Catalog.Controllers
             return CreatActionResultInstance(response);
         }
 
+        [HttpGet]
         [Route("Api/[controller]/GetAllByUserId/{userId}")]
         public async Task<IActionResult> GetAllByUserId(string userId)
         {
@@ -42,16 +44,16 @@ namespace TicketSale.Services.Catalog.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(TicketCreateDto courseCreateDto)
+        public async Task<IActionResult> Create(TicketCreateDto ticketCreateDto)
         {
-            var response = await _ticketService.CreateAsync(courseCreateDto);
+            var response = await _ticketService.CreateAsync(ticketCreateDto);
             return CreatActionResultInstance(response);
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update(TicketUpdateDto courseCreateDto)
+        public async Task<IActionResult> Update(TicketUpdateDto ticketCreateDto)
         {
-            var response = await _ticketService.UpdateAsync(courseCreateDto);
+            var response = await _ticketService.UpdateAsync(ticketCreateDto);
             return CreatActionResultInstance(response);
         }
 

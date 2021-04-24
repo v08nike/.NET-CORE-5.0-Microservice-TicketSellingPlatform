@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace TicketSale.Services.Catalog.Settings
 {
-    interface IDatabaseSettings
+    public interface IDatabaseSettings
     {
         public string TicketCollectionName { get; set; }
         public string CategoryCollectionName { get; set; }

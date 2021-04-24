@@ -8,7 +8,7 @@ using TicketSale.Shared.Dtos;
 
 namespace TicketSale.Services.Catalog.Services
 {
-    interface ICategoryService
+    public interface ICategoryService
     {
         Task<Response<List<CategoryDto>>> GetAllAsync();
 
