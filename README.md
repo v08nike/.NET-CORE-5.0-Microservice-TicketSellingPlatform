@@ -28,14 +28,23 @@ A- Services -> Catalog -> TicketSale.Services.Catalog
 - Dosyada veritaban yolunu, ismi ve Collection ismi ayarlayacağız.
 - Gerekli ayarlar için interface ve class oluşturulması :point_right: Services/Catalog/TicketSale.Services.Catalog/Settings/
 
-5) Servisleri Eklemek. 
+5) Servislerin sınıfları ve arayüzleri Oluşturmak. 
 :point_right: Services/Catalog/TicketSale.Services.Catalog/Services/
 - CategoryService.cs
 - ICategoryService.cs
 - ITicketService.cs
 - TicketService.cs
 
-6) .
+6) Controller sınıfları Oluşturmak.
+- CategoriesController.cs
+- TicketsController.cs
+
+7) Portainer Ayarlamak.
+
+8) MongoDB’i container olarak ayağa kaldırma.
+
+9) Uygulamayı Test Etmek.
+
 
 B- Shared/TicketSale.Shared/
 1) Shared class Library oluşturma.
