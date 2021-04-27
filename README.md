@@ -1,8 +1,9 @@
 # TICKET SELLING PLATFORM BASED ON .NET CORE 5.0 AND MICROSERVICES ARCHITECTURE.
 
-# .NET CORE 5.0 İLE MİCKOSERVİSLER TABANLI BİLET SATIŞ WEBSİTESİ .
+# .NET CORE 5.0 İLE MİCKOSERVİSLER TABANLI BİLET SATIŞ WEBSİTESİ.
 
-A- Services -> Catalog -> TicketSale.Services.Catalog
+A- TicketSale.Services.Catalog WEB API. 
+:point_right: Services -> Catalog -> TicketSale.Services.Catalog
 
 1) MongoDB.Driver ile class'ların oluşturulması.
 :point_right: Services/Catalog/TicketSale.Services.Catalog/Models/
@@ -46,7 +47,11 @@ A- Services -> Catalog -> TicketSale.Services.Catalog
 9) Uygulamayı Test Etmek.
 
 
-B- Shared/TicketSale.Shared/
+B- TicketSale.Shared WEB API.
+:point_right: Shared/TicketSale.Shared/
+
 1) Shared class Library oluşturma.
-2) Dto -> response oluşturma.
-3) 
+
+2) Dto Nesneleri Oluşturmak.
+
+3) Controller Bases Oluşturmak.
