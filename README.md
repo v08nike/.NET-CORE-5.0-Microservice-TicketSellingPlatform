@@ -47,11 +47,10 @@ A- TicketSale.Services.Catalog WEB API.
 9) Uygulamayı Test Etmek.
 
 
-B- TicketSale.Shared WEB API.
+B- TicketSale.Shared Shared class Library .
 :point_right: Shared/TicketSale.Shared/
 
-1) Shared class Library oluşturma.
 
-2) Dto Nesneleri Oluşturmak.
+1) Dto Nesneleri Oluşturmak.
 
-3) Controller Bases Oluşturmak.
+2) Controller Bases Oluşturmak.
