@@ -28,6 +28,14 @@ A- Services -> Catalog -> TicketSale.Services.Catalog
 - Dosyada veritaban yolunu, ismi ve Collection ismi ayarlayacağız.
 - Gerekli ayarlar için interface ve class oluşturulması :point_right: Services/Catalog/TicketSale.Services.Catalog/Settings/
 
+5) Servisleri Eklemek. 
+:point_right: Services/Catalog/TicketSale.Services.Catalog/Services/
+- CategoryService.cs
+- ICategoryService.cs
+- ITicketService.cs
+- TicketService.cs
+
+6) .
 
 B- Shared/TicketSale.Shared/
 1) Shared class Library oluşturma.
