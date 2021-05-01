@@ -39,10 +39,10 @@ namespace TicketSale.Services.PhotoStock.Controllers
 
         } 
     
-        public IActionResult PhotoDelet(string photoUrl)
+        public IActionResult PhotoDelete(string photoUrl)
         {
             var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/photos",photoUrl);
-            if (System.IO.File.Exists(path))
+            if (!System.IO.File.Exists(path))
             {
                 return CreatActionResultInstance(Response<NoContent>.Fail("photo not found", 404));
             }
