@@ -37,6 +37,20 @@ namespace TicketSale.Services.PhotoStock.Controllers
             }
             return CreatActionResultInstance(Response<PhotoDto>.Fail("photo is empty", 400));
 
+        } 
+    
+        public IActionResult PhotoDelet(string photoUrl)
+        {
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/photos",photoUrl);
+            if (System.IO.File.Exists(path))
+            {
+                return CreatActionResultInstance(Response<NoContent>.Fail("photo not found", 404));
+            }
+
+            System.IO.File.Delete(path);
+            return CreatActionResultInstance(Response<NoContent>.Success( 204));
+
         }
+    
     }
 }
