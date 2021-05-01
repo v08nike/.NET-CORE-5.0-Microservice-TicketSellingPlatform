@@ -22,6 +22,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketSale.IdentityServer", "IdentityServer\TicketSale.IdentityServer\TicketSale.IdentityServer.csproj", "{148B8B97-821E-4173-B714-5FDC8F1D993D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStock", "PhotoStock", "{BAC86D5A-F887-4FD6-8A64-DDAB33E2B352}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketSale.Services.PhotoStock", "Services\PhotoStock\TicketSale.Services.PhotoStock\TicketSale.Services.PhotoStock.csproj", "{B8987203-42AE-4183-92F0-A5BADE64239C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +44,10 @@ Global
 		{148B8B97-821E-4173-B714-5FDC8F1D993D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{148B8B97-821E-4173-B714-5FDC8F1D993D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{148B8B97-821E-4173-B714-5FDC8F1D993D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8987203-42AE-4183-92F0-A5BADE64239C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8987203-42AE-4183-92F0-A5BADE64239C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8987203-42AE-4183-92F0-A5BADE64239C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8987203-42AE-4183-92F0-A5BADE64239C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +57,8 @@ Global
 		{8E7B6F59-9788-452D-BCE7-F07735AB2AE0} = {FA207D52-3990-4A0B-8D6A-89DEAE3C28E7}
 		{24320760-952D-4CAC-8FBC-019B53F42310} = {6E3A9B34-C128-454D-9694-28A5A126E272}
 		{148B8B97-821E-4173-B714-5FDC8F1D993D} = {87F37CFF-E101-41D9-9A94-0220CE2157F8}
+		{BAC86D5A-F887-4FD6-8A64-DDAB33E2B352} = {2A8B51D6-1CF3-497F-8DA0-4CEFCE3FD012}
+		{B8987203-42AE-4183-92F0-A5BADE64239C} = {BAC86D5A-F887-4FD6-8A64-DDAB33E2B352}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {65070AA6-9E15-442C-9C82-4277C444C7A5}
