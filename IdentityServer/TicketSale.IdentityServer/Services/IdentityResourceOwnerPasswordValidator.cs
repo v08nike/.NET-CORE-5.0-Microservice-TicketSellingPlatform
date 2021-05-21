@@ -1,19 +1,19 @@
-﻿using IdentityModel;
+﻿using TicketSale.IdentityServer.Models;
+using IdentityModel;
 using IdentityServer4.Validation;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TicketSale.IdentityServer.Models;
 
 namespace TicketSale.IdentityServer.Services
 {
-    public class IdentityResourceOwnewPasswordValidator : IResourceOwnerPasswordValidator
+    public class IdentityResourceOwnerPasswordValidator : IResourceOwnerPasswordValidator
     {
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public IdentityResourceOwnewPasswordValidator(UserManager<ApplicationUser> userManager)
+        public IdentityResourceOwnerPasswordValidator(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
         }
@@ -25,20 +25,17 @@ namespace TicketSale.IdentityServer.Services
             if (existUser == null)
             {
                 var errors = new Dictionary<string, object>();
-                errors.Add("errors",new List<string> { "Email veya şifreniz yanlış"});
-
+                errors.Add("errors", new List<string> { "Email veya şifreniz yanlış" });
                 context.Result.CustomResponse = errors;
 
                 return;
             }
-
             var passwordCheck = await _userManager.CheckPasswordAsync(existUser, context.Password);
-            
+
             if (passwordCheck == false)
             {
                 var errors = new Dictionary<string, object>();
                 errors.Add("errors", new List<string> { "Email veya şifreniz yanlış" });
-
                 context.Result.CustomResponse = errors;
 
                 return;

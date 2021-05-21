@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using TicketSale.IdentityServer.Dtos;
+using TicketSale.IdentityServer.Models;
+using TicketSale.Shared.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -7,9 +10,6 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
-using TicketSale.IdentityServer.Dto;
-using TicketSale.IdentityServer.Models;
-using TicketSale.Shared.Dtos;
 using static IdentityServer4.IdentityServerConstants;
 
 namespace TicketSale.IdentityServer.Controllers
@@ -45,7 +45,7 @@ namespace TicketSale.IdentityServer.Controllers
 
             return NoContent();
         }
-      
+
         [HttpGet]
         public async Task<IActionResult> GetUser()
         {
@@ -57,8 +57,7 @@ namespace TicketSale.IdentityServer.Controllers
 
             if (user == null) return BadRequest();
 
-            return Ok(new { Id = user.Id, UserName = user.UserName, Email = user.Email, City=user.City });
+            return Ok(new { Id = user.Id, UserName = user.UserName, Email = user.Email, City = user.City });
         }
-    
     }
 }

@@ -1,3 +1,13 @@
+using FluentValidation.AspNetCore;
+using TicketSale.Shared.Services;
+using TicketSale.Web.Extensions;
+using TicketSale.Web.Handler;
+using TicketSale.Web.Helpers;
+using TicketSale.Web.Models;
+using TicketSale.Web.Services;
+using TicketSale.Web.Services.Interfaces;
+using TicketSale.Web.Validators;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -7,7 +17,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TicketSale.Web.Models;
 
 namespace TicketSale.Web
 {
@@ -23,8 +32,26 @@ namespace TicketSale.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<ClientSettings>(Configuration.GetSection("ClientSettings"));
             services.Configure<ServiceApiSettings>(Configuration.GetSection("ServiceApiSettings"));
-            services.AddControllersWithViews();
+            services.AddHttpContextAccessor();
+            services.AddAccessTokenManagement();
+            services.AddSingleton<PhotoHelper>();
+            services.AddScoped<ISharedIdentityService, SharedIdentityService>();
+
+            services.AddScoped<ResourceOwnerPasswordTokenHandler>();
+            services.AddScoped<ClientCredentialTokenHandler>();
+
+            services.AddHttpClientServices(Configuration);
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, opts =>
+             {
+                 opts.LoginPath = "/Auth/SignIn";
+                 opts.ExpireTimeSpan = TimeSpan.FromDays(60);
+                 opts.SlidingExpiration = true;
+                 opts.Cookie.Name = "udemywebcookie";
+             });
+
+            services.AddControllersWithViews().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<TicketCreateInputValidator>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,10 +65,11 @@ namespace TicketSale.Web
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

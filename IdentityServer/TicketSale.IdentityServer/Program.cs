@@ -1,7 +1,8 @@
 ﻿// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
-
+using TicketSale.IdentityServer.Data;
+using TicketSale.IdentityServer.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -13,8 +14,6 @@ using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
 using System;
 using System.Linq;
-using TicketSale.IdentityServer.Data;
-using TicketSale.IdentityServer.Models;
 
 namespace TicketSale.IdentityServer
 {
@@ -41,13 +40,11 @@ namespace TicketSale.IdentityServer
 
             try
             {
-               
-
                 var host = CreateHostBuilder(args).Build();
 
-                using (var scoope = host.Services.CreateScope())
+                using (var scope = host.Services.CreateScope())
                 {
-                    var serviceProvider = scoope.ServiceProvider;
+                    var serviceProvider = scope.ServiceProvider;
 
                     var applicationDbContext = serviceProvider.GetRequiredService<ApplicationDbContext>();
 
@@ -57,9 +54,8 @@ namespace TicketSale.IdentityServer
 
                     if (!userManager.Users.Any())
                     {
-                        userManager.CreateAsync(new ApplicationUser { UserName = "nermin", Email = "nermin.kaya.sau@gmail.com",City="Sakarya" },"Nana123.").Wait();
+                        userManager.CreateAsync(new ApplicationUser { UserName = "fcakiroglu16", Email = "f-cakiroglu@outlook.com", City = "Ankara" }, "Password12*").Wait();
                     }
-
                 }
 
                 Log.Information("Starting host...");
