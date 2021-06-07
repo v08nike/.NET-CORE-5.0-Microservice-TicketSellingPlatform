@@ -1,5 +1,9 @@
 # .NET CORE 5.0 İLE MİCKOSERVİSLER TABANLI BİLET SATIŞ WEBSİTESİ.
 
+Proje Yapısı : 
+
+![](https://github.com/nermiin/.NET-CORE-5.0-Microservice-TicketSellingPlatform/blob/main/Blank%20diagram%20-%20Page%201.jpeg)
+
 A- TicketSale.Services.Catalog WEB API. 
 :point_right: Services -> Catalog -> TicketSale.Services.Catalog
 
