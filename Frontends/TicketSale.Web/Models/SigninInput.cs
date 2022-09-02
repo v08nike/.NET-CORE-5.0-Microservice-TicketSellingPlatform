@@ -8,14 +8,15 @@ namespace TicketSale.Web.Models
 {
     public class SigninInput
     {
-        [Display(Name ="Email adresiniz")]
-        public string Emial { get; set; }
+        [Required]
+        [Display(Name = "Email adresiniz")]
+        public string Email { get; set; }
 
+        [Required]
         [Display(Name = "Şifreniz")]
         public string Password { get; set; }
 
-        [Display(Name = "Beni Hatırla")]
+        [Display(Name = "Beni hatırla")]
         public bool IsRemember { get; set; }
-    
     }
 }

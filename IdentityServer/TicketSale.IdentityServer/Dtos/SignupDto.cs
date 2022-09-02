@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TicketSale.IdentityServer.Dto
+namespace TicketSale.IdentityServer.Dtos
 {
     public class SignupDto
     {
@@ -12,15 +12,12 @@ namespace TicketSale.IdentityServer.Dto
         public string UserName { get; set; }
 
         [Required]
-
         public string Email { get; set; }
 
         [Required]
-
         public string Password { get; set; }
 
         [Required]
-
         public string City { get; set; }
     }
 }
